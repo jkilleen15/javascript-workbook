@@ -50,7 +50,7 @@ addsTwo(7, 5);
 function twoAreTrue (a, b) {
   if (a === true && b === true) {
     return 'Pass! Results: ' + a + ' and ' + b;
-  } // else {return "nope";}
+  } // else {return 'nope';}
 }
 
 twoAreTrue(true, true);
@@ -60,7 +60,7 @@ twoAreTrue(true, true);
 function twoAreTrueShort (a, b) {
   if (a && b) {
     return 'Pass! Results: ' + a + ' and ' + b;
-  } // else {return "nope";}
+  } // else {return 'nope';}
 }
 
 twoAreTrueShort(true, true);
@@ -70,7 +70,7 @@ twoAreTrueShort(true, true);
 function onOfTwoTrue (a, b) {
   if (a === true || b === true) {
     return 'Pass! Results: ' + a + ' and ' + b;
-  } // else {return "neither";}
+  } // else {return 'neither';}
 }
 
 onOfTwoTrue(true, false);
@@ -80,7 +80,7 @@ onOfTwoTrue(true, false);
 function oneOfTwoTrueShort (a, b) {
   if (a || b) {
     return 'Pass! Results: ' + a + ' and ' + b;
-  } // else {return "neither";}
+  } // else {return 'neither';}
 }
 
 oneOfTwoTrueShort(false, true);
@@ -90,7 +90,7 @@ oneOfTwoTrueShort(false, true);
 function neitherTrue (a, b) {
   if (!a === true && !b === true) {
     return 'Pass! Results: ' + a + ' and ' + b;
-  }  // else {return "nope";}
+  }  // else {return 'nope';}
 }
 
 neitherTrue(false, false);
@@ -98,7 +98,7 @@ neitherTrue(false, false);
 function neitherTrueShort (a, b) {
   if (!a && !b) {
     return 'Pass! Results: ' + a + ' and ' + b;
-  } // else {return "nope";}
+  } // else {return 'nope';}
 }
 
 neitherTrueShort(false, false);
