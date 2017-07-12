@@ -1,4 +1,5 @@
 // Write a JavaScript program to display the current day and time.
+
 function getDate () {
   return new Date();
 }
@@ -6,6 +7,7 @@ function getDate () {
 getDate();
 
 // Write a JavaScript program to convert a number to a string.
+
 function convertToString (num) {
   return num.toString();
 }
@@ -30,12 +32,13 @@ NaN
 String */
 
 function whichType (thing) {
-  return typeof thing;
+  return 'Datatype = ' + typeof thing;
 }
 
-whichType(true);
+whichType('hat');
 
 // Write a JavaScript program that adds 2 numbers together.
+
 function addsTwo (a, b) {
   return a + b;
 }
@@ -43,59 +46,59 @@ function addsTwo (a, b) {
 addsTwo(7, 5);
 
 // Write a JavaScript program that runs only when 2 things are true.
-function twoAreTrue () {
-  var a = true;
-  var b = false;
-  if ((a === true) && (b === true)) {
-    return a + ' and ' + b;
+
+function twoAreTrue (a, b) {
+  if (a === true && b === true) {
+    return 'Pass! Results: ' + a + ' and ' + b;
   } // else {return "nope";}
 }
 
-twoAreTrue();
+twoAreTrue(true, true);
 
 // OR
 
-function twoAreTrueShort () {
-  var a = true;
-  var b = true;
+function twoAreTrueShort (a, b) {
   if (a && b) {
-    return a + ' and ' + b;
+    return 'Pass! Results: ' + a + ' and ' + b;
   } // else {return "nope";}
 }
 
-twoAreTrueShort();
+twoAreTrueShort(true, true);
 
 // Write a JavaScript program that runs when 1 of 2 things are true
-function onOfTwoTrue () {
-  var a = true;
-  var b = true;
-  if ((a === true) || (b === true)) {
-    return a + ' and ' + b;
+
+function onOfTwoTrue (a, b) {
+  if (a === true || b === true) {
+    return 'Pass! Results: ' + a + ' and ' + b;
   } // else {return "neither";}
 }
 
-onOfTwoTrue();
+onOfTwoTrue(true, false);
 
 // OR
 
-function oneOfTwoTrueShort () {
-  var a = true;
-  var b = false;
+function oneOfTwoTrueShort (a, b) {
   if (a || b) {
-    return a + ' and ' + b;
+    return 'Pass! Results: ' + a + ' and ' + b;
   } // else {return "neither";}
 }
 
-oneOfTwoTrueShort();
+oneOfTwoTrueShort(false, true);
 
 // Write a JavaScript program that runs when both things are not true.
 
-function neitherTrue () {
-  var a = false;
-  var b = false;
+function neitherTrue (a, b) {
+  if (!a === true && !b === true) {
+    return 'Pass! Results: ' + a + ' and ' + b;
+  }  // else {return "nope";}
+}
+
+neitherTrue(false, false);
+
+function neitherTrueShort (a, b) {
   if (!a && !b) {
-    return a + ' and ' + b;
+    return 'Pass! Results: ' + a + ' and ' + b;
   } // else {return "nope";}
 }
 
-neitherTrue();
+neitherTrueShort(false, false);
