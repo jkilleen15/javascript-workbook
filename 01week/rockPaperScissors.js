@@ -8,10 +8,13 @@ const rl = readline.createInterface({
 });
 
 function rockPaperScissors (hand1, hand2) {
-  // Write code here
   hand1 = hand1.toLowerCase().trim();
   hand2 = hand2.toLowerCase().trim();
-  if (hand1 === hand2) {
+  if (!(hand1 === 'rock' || hand1 === 'paper' || hand1 === 'scissors')) {
+    return 'No results. Each player must select rock, paper or scissors to play.';
+  } else if (!(hand2 === 'rock' || hand2 === 'paper' || hand2 === 'scissors')) {
+    return 'No results. Each player must select rock, paper or scissors to play.';
+  } else if (hand1 === hand2) {
     return 'It\'s a tie!';
   } else if (hand1 === 'rock') {
     if (hand2 === 'paper') {
@@ -25,7 +28,7 @@ function rockPaperScissors (hand1, hand2) {
     } else {
       return 'Hand one wins!';
     }
-  } else {
+  } else { // hand1 === 'scissors'
     if (hand2 === 'rock') {
       return 'Hand two wins!';
     } else {
