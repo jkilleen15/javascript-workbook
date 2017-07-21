@@ -14,7 +14,7 @@ let board = [
 
 let playerTurn = 'X';
 
-function printBoard() {
+function printBoard () {
   console.log('   0  1  2');
   console.log('0 ' + board[0].join(' | '));
   console.log('  ---------');
@@ -23,7 +23,7 @@ function printBoard() {
   console.log('2 ' + board[2].join(' | '));
 }
 
-function horizontalWin() {
+function horizontalWin () {
   return (
     (board[0][0] === playerTurn && board[0][1] === playerTurn && board[0][2] === playerTurn) ||
     (board[1][0] === playerTurn && board[1][1] === playerTurn && board[1][2] === playerTurn) ||
@@ -35,16 +35,16 @@ function horizontalWin() {
   //  return true;
 }
 
-function verticalWin() {
+function verticalWin () {
   // Your code here
   return (
     (board[0][0] === playerTurn && board[1][0] === playerTurn && board[2][0] === playerTurn) ||
     (board[0][1] === playerTurn && board[1][1] === playerTurn && board[2][1] === playerTurn) ||
     (board[0][2] === playerTurn && board[1][2] === playerTurn && board[2][2] === playerTurn)
   );
-  }
+}
 
-function diagonalWin() {
+function diagonalWin () {
   // Your code here
   return (
     (board[0][0] === playerTurn && board[1][1] === playerTurn && board[2][2] === playerTurn) ||
@@ -52,38 +52,45 @@ function diagonalWin() {
   );
 }
 
-function checkForWin() {
+function checkForWin () {
   // Your code here
   if (horizontalWin() || verticalWin() || diagonalWin()) {
     console.log('Player ' + playerTurn + ' wins!');
-    //console.log('Play Again!');
-  return true;
+    // console.log('Play Again!');
+    return true;
   }
 }
 
-function ticTacToe(row, column) {
+function ticTacToe (row, column) {
   // Your code here
   board[row][column] = playerTurn;
-  //playerTurn = (playerTurn === 'X') ? true : false
-  if (!checkForWin()){
+  // playerTurn = (playerTurn === 'X') ? true : false
+  if (!checkForWin()) {
     playerTurn = (playerTurn === 'X') ? 'O' : 'X';
   }
 }
 
-function getPrompt() {
+function getPrompt () {
   printBoard();
+  // My solution
+  // 1. checks for the wins
+  // 2. if no win -> keeps going, standard prompt
+  // 3. if win -> prompts to play again
+              //  let's players know whose turn - winner goes first
+              //  clears board, prints fresh board, new game begins
+
   if (!checkForWin()) {
-  console.log("It's Player " + playerTurn + "'s turn.");
-} else {
-  console.log('Let\'s play again!');
-  console.log("Winner begins - It's Player " + playerTurn + "'s turn.");
-  board = [
+    console.log("It's Player " + playerTurn + "'s turn.");
+  } else {
+    console.log('Let\'s play again!');
+    console.log("Winner begins - It's Player " + playerTurn + "'s turn.");
+    board = [
     [' ', ' ', ' '],
     [' ', ' ', ' '],
     [' ', ' ', ' ']
-  ];
-printBoard();
-}
+    ];
+    printBoard();
+  }
   rl.question('row: ', (row) => {
     rl.question('column: ', (column) => {
       ticTacToe(row, column);
@@ -91,8 +98,6 @@ printBoard();
     });
   });
 }
-
-
 
 // Tests
 
