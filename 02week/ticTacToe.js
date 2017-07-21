@@ -24,15 +24,12 @@ function printBoard () {
 }
 
 function horizontalWin () {
+    // Your code here
   return (
     (board[0][0] === playerTurn && board[0][1] === playerTurn && board[0][2] === playerTurn) ||
     (board[1][0] === playerTurn && board[1][1] === playerTurn && board[1][2] === playerTurn) ||
     (board[2][0] === playerTurn && board[2][1] === playerTurn && board[2][2] === playerTurn)
   );
-  // Your code here
-// for (var i = 0; i < board[0].length; i++) {
-//  if (board[0][i] === board [0][0]) {
-  //  return true;
 }
 
 function verticalWin () {
