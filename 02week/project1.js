@@ -44,9 +44,8 @@ console.log('Cars in Reverse: ' + carsInReverse);
 
 carsInReverse.sort();
 console.log(carsInReverse);
-var alert;
-alert(carsInReverse.indexOf('Dodge'));
-
+// alert(carsInReverse.indexOf('Dodge')); //alert available in context of browser window only/window object
+console.log('Dodge is the first car with indexOf: ' + carsInReverse.indexOf('Dodge'));
 // 8 slice
 // Use the slice method to remove Ford and Honda from the carsInReverse array and move them into a new array called removedCars.
 var removedCars = carsInReverse.slice(1, 3);
