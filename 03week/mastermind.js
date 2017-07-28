@@ -57,8 +57,8 @@ function mastermind (guess) {
   // solution = 'abcd'; // Comment this out to generate a random solution
     // 1) should register a guess and generate hints
     // 2) should be able to detect a win
+  // console.log('solution: ' + solution); // uncomment line start for quick test
   solStr = solution;
-  console.log('solution: ' + solution);
   sol = solution.split('');
   guessStr = guess;
   guess = guess.split('');
