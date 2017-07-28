@@ -17,7 +17,7 @@ var solStr = '';
 var win = false;
 
 function printBoard() {
-  console.log('Your guesses: ');
+  console.log('\nYour guesses: ');
   for (let i = 0; i < board.length; i++) {
     console.log(board[i]);
   }
@@ -39,11 +39,11 @@ function generateHint (guess) {
   var charHit = 0;
   // console.log('sol first char ' + sol[0]);
   // console.log('guess first char ' + guess[0]);
-  for (var i = 0; i < 4; ++i) {
+  for (var i = 0; i < 4; i++) {
     if (sol[i] === guess[i]) {
-      ++bothHit;
+      bothHit++;
     } else if (sol[i] !== guess[i] && guess.includes(sol[i])) {
-      ++charHit;
+      charHit++;
     }
     hint = (bothHit + '-' + charHit);
     if (bothHit === 4) {
