@@ -83,14 +83,14 @@ var binarySearch = function (arr, item) {
   while (maxBin >= minBin) {
     // assigns average of max and min to guess variable
     guess = Math.floor((minBin + maxBin) / 2);
-    // if average/guess is equal to item param - item is found!
+    // if average/guess is equal to item param, then item is found!
     if (arr[guess] === item) {
       return guess;
     } else if (arr[guess] < item) {
-      // if guess is lower than item param - new min threshold is 1 above guess
+      // if guess is lower than item param, then new min threshold is 1 above guess
       minBin = guess + 1;
     } else {
-      // if guess is higher than item param - new max threshold is 1 below guess
+      // if guess is higher than item param, then new max threshold is 1 below guess
       maxBin = guess - 1;
     }
   }
