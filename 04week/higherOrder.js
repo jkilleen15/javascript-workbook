@@ -2,24 +2,81 @@
 
 const assert = require('assert');
 
-function forEach(arr, callback) {
-  // Your code here
+// FOREACH
+// My code here
+// Create a forEach() function that takes an array of items and
+// a function that runs the function arr.length number of times.
+let forEach = (arr, callback) => {
+  // for each item in the array
+  for (let i = 0; i < arr.length; i++) {
+  // call the callback function
+    callback(arr);
+  }
+};
+
+// MAP
+// My Code Here
+let map = (arr, callback) => {
+  // create empty array in which you will store mutated items
+  let newArr = [];
+  // for each item in the array
+  for (let i = 0; i < arr.length; i++) {
+  // add result of callback function to newArray
+    newArr.push(callback(arr[i]));
+  }
+  // return new (result) array
+  return newArr;
+};
+
+// FILTER
+// My code here
+let filter = (arr, callback) => {
+  // create new array in which you will store items which
+  // match filter/pass condit
+  let filteredArr = [];
+  // for each item in the array
+  for (let i = 0; i < arr.length; i++) {
+  // if the callback function returns true
+    if (callback(arr[i])) {
+  // add (passing) results to array
+      filteredArr.push(arr[i]);
+    }
+  }
+  return filteredArr;
+};
+
+// SOME
+// My code here
+// Create a some() function that takes an array of items and a function that
+// returns true or false if any of the items return true in the function.
+
+function some (arr, callback) {
+  // for each item in the array
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(callback(arr[i]));
+    // if callback function returns true, return true to end loop
+    if (callback(arr[i])) {
+      return true;
+    }
+  }
+  // else loop completes with no true result, then return false
+  return false;
 }
 
-function map(arr, callback) {
-  // Your code here
-}
+// EVERY
+// My code here
 
-function filter(arr, callback) {
-  // Your code here
-}
-
-function some(arr, callback) {
-  // Your code here
-}
-
-function every(arr, callback) {
-  // Your code here
+function every (arr, callback) {
+  // for each item in array
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(callback(arr[i]));
+    // if callback function returns false, return false to end loop
+    if (!callback(arr[i])) {
+      return false;
+    }
+  }
+  // else loop completes with no false result, then return true
+  return true;
 }
 
 if (typeof describe === 'function') {
