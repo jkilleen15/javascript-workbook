@@ -32,7 +32,7 @@ let map = (arr, callback) => {
 // My code here
 let filter = (arr, callback) => {
   // create new array in which you will store items which
-  // match filter/pass condit
+  // match filter/pass condition
   let filteredArr = [];
   // for each item in the array
   for (let i = 0; i < arr.length; i++) {
