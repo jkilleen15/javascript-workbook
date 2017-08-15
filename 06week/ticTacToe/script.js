@@ -1,5 +1,7 @@
 'use strict';
 
+// one version ahead - else if and toggle in new place
+
 let arrayO = [];
 let arrayX = [];
 
@@ -31,8 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // add the cell value to corresponding player array
         if (e.target.innerHTML === 'X') {
           arrayX.push(parseInt(e.target.dataset.cell));
-        }
-        if (e.target.innerHTML === 'O') {
+        } else if (e.target.innerHTML === 'O') {
           arrayO.push(parseInt(e.target.dataset.cell));
         }
         toggle = !toggle;
