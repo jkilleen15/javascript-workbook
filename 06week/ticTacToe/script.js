@@ -14,7 +14,7 @@ let winners = [
   [2,4,6]
 ];
 
-console.log('this is it: ' + winners[1]);
+//console.log('this is it: ' + winners[1]);
 
 document.addEventListener('DOMContentLoaded', () => {
   // Your code here
