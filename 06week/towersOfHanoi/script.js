@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-block]').forEach((block) => {
     block.addEventListener('click', (e) => {
     e.stopPropagation();
-      moved = { size: e.target.attributes[0].value,
+      moved = { size: parseInt(e.target.attributes[0].value),
                target: e.target,
                parent: e.target.parentNode
           };
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ok = true;
         e.target.parentNode.removeChild(e.target);
         // debugger;
-        console.log(moved.size);
+        // console.log(moved.size);
         // command below added so tile remains in place until next move
         // it is 'active', but does not disappear
         moved.parent.appendChild(moved.target);
@@ -36,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (e.target.children.length === 1) {
         // console.log(e.target.children.length);
         // console.log(e.target.lastChild.attributes[0].value);
-        // let tileInPlaceSize = e.target.lastChild.attributes[0].value;
-            let tileInPlaceSize2 = e.target.children[0].attributes[0].value;
+            let tileInPlaceSize2 = parseInt(e.target.children[0].attributes[0].value);
             // console.log('moved size: ' + moved.size);
             // console.log('Only 1 tile size: ' + tileInPlaceSize2);
             if (moved.size > tileInPlaceSize2) {
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
         if (e.target.children.length > 1) {
-          let tileInPlaceSize = e.target.lastElementChild.attributes[0].value;
+          let tileInPlaceSize = parseInt(e.target.lastElementChild.attributes[0].value);
           // console.log('moved size: ' + moved.size);
           // console.log('tile in place size: ' + tileInPlaceSize);
           if (moved.size > tileInPlaceSize) {
