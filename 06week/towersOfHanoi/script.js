@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.stopPropagation();
       moved = { size: e.target.attributes[0].value,
                target: e.target,
-               parent: e.target.parentNode,
-               last: ''
+               parent: e.target.parentNode
           };
       if (moved.target != moved.parent.lastElementChild) {
         alert('Oops! Please select last/outermost right tile from row.');
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Nope. This tile is too big for destination stack!');
             moved.parent.appendChild(moved.target);
           // debugger;
-          // return;
           } else {
             e.target.appendChild(moved.target);
           // debugger;
