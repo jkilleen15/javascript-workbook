@@ -74,11 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 }
 
-  if (e.target.children.length === 4) {
+  if (e.target.children.length === 4 && e.target.attributes[0].value === "3") {
+    //console.log(e.target.attributes[0].value);
+    //if (e.target.attributes[0].value === "3") {
     console.log('You win! Refresh to play again!');
     document.getElementById('announce-game-won').innerHTML = ('You Win!<br>Refresh page to play again!');
-  }
-
+  //}
+}
 });
 });
 });
