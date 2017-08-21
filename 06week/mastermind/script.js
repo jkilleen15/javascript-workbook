@@ -207,7 +207,7 @@ function checkGuess () {
 // InsertBefore ensures latest guess appears first for user convenience
 
 function displayHints () {
-    // TO DO NEED TO APPEND THESE TO TOP!
+    // RESULTS APPEAR LAST GUESS ON TOP
   guess = guess.join(' , ');
   answer = answer.join(' , ');
   let hintList = document.getElementById('hintList');
