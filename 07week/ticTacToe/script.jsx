@@ -14,9 +14,6 @@ let winners = [
   [2,4,6]
 ];
 
-//let winner = false;
-//let refresh = false;
-
 class TicTacToe extends React.Component {
   constructor(props) {
     super(props);
@@ -24,9 +21,17 @@ class TicTacToe extends React.Component {
     this.makeMove = this.makeMove.bind(this);
 }
 
+// when any square is clicked:
+// checks if it is popuplated
+// square populated with symbol of current player turn (xTurn)
+// cell value of selected cell sent to corresponding player array
+// check for win is called
+// player turn is switched in anticipation of next square selection
+
   makeMove (e) {
     var cellIndex = e.target.dataset.cell;
     //console.log('made it to makeMove');
+    //checks if square is already populated
     if (!e.target.innerHTML) {
       e.target.innerHTML = (this.state.xTurn ? 'X' : 'O');
       if (e.target.innerHTML === 'X') {
@@ -38,10 +43,16 @@ class TicTacToe extends React.Component {
       this.setState({
         xTurn: !this.state.xTurn
       });
+      // xturn will not change until valid square selected
+      // message to user when square is already populated (invalid)
     } else {
       alert('Oops! That space has already been selected!');
     }
   }
+
+  // refresh() is connected to 'start new game' button, rendered below
+  // clickable option instead of hard refresh (player x always starts)
+  // potential TO DO - change code to have winner start
 
   refresh () {
       // refresh = true;
@@ -52,13 +63,11 @@ class TicTacToe extends React.Component {
     // console.log('arrayX: ' + arrayX);
     arrayO = [];
     arrayX = [];
-    // winner = false;
     // console.log('arrayO: ' + arrayO);
     // console.log('arrayX: ' + arrayX);
   }
 
   render () {
-    // if (!winner === true) {
     return (
       <div>
         <div className="row">
@@ -85,6 +94,9 @@ class TicTacToe extends React.Component {
   }
 }
 
+// checks for win
+// displays win message with prompt to begin new game
+
 let checkForWin = function () {
   // console.log('made it to check for win');
   for (let i = 0; i < winners.length; i++) {
@@ -96,15 +108,14 @@ let checkForWin = function () {
     if (arrayO.join().includes(winners[i].join())) {
       alert('Player O Wins! \nClick \'Start New Game\' to play again!\n' +
       'Loser begins next game!');
-      // winner = true;
-      // return true;
+
     } else if (arrayX.join().includes(winners[i].join())) {
       alert('Player X Wins! \nClick \'Start New Game\' to play again!\n' +
       'Loser begins next game!');
-      // winner = true;
-      // return true;
+
     }
   }
 };
 
+// renders html components to page
 ReactDOM.render(<TicTacToe />, document.getElementById('container'));
