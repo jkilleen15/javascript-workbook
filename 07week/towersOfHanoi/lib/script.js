@@ -10,7 +10,8 @@ class TowersOfHanoi extends React.Component {
     this.selectRow = this.selectRow.bind(this);
   }
 
-  // onclick each item--becomes 'moved' object':
+  // selectBlock summary:
+  // onclick each block--becomes 'moved' object':
   // ensures it is the top/right most block
   // becomes the target
   // it's parent becomes the parent
@@ -20,8 +21,8 @@ class TowersOfHanoi extends React.Component {
     // Your code here
     e.stopPropagation();
     // block clicked becomes the target
-    // it's value becomes the size
-    // it's parent becomes the parent
+    // this block's value becomes the size
+    // this block's parent becomes the parent
     moved = { size: parseInt(e.target.attributes[0].value),
       target: e.target,
       parent: e.target.parentNode
@@ -41,10 +42,10 @@ class TowersOfHanoi extends React.Component {
     }
   }
 
-  // onclick row outside block:
+  // selectRow Summary - onclick row outside block, becomes destination:
   // checks if row is populated
-  // checks value of block in row (when 1)
-  // checks value of last block in row (when > 1)
+  // if populated, checks value of block in row (when 1)
+  // if populated, checks value of last block in row (when > 1)
   // compares value of last in row to 'moved'
   // if all checks out, moves 'moved' to new row
 
@@ -106,19 +107,7 @@ class TowersOfHanoi extends React.Component {
       }
     }
   }
-  /*
-    // check for win
-    // win = stack length is 4, and stack value is '3'
-    checkForWin (e) {
-      console.log('made it to check for win');
-      if (e.target.children.length === 4 && e.target.attributes[0].value === "3") {
-        //console.log(e.target.attributes[0].value);
-        console.log('You win! Refresh to play again!');
-        alert('You Win!<br>Refresh page to play again!');
-        document.getElementById('announce-game-won').innerHTML = ('You Win!<br>Refresh page to play again!');
-    }
-  }
-  */
+
   render() {
     return React.createElement(
       'div',
