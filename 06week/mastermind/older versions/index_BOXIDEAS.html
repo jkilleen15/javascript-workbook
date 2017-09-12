@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styleTEST.css" />
+</head>
+<body>
+  <div class="row" id = "row1">
+    <div data-cell="0"><input type=text id="input1"></input></div>
+    <div data-cell="1"><input type=text id="input2"></input></div>
+    <div data-cell="2"><input type=text id="input3"></input></div>
+    <div data-cell="3"><input type=text id="input4"></input></div>
+    <div data-cell="4" class = "checkAnswer" id="ans1"><p>Check Answer</p></div>
+  </div>
+  <div class="row">
+    <div data-cell="5"><input type=text></input></div>
+    <div data-cell="6"><input type=text></input></div>
+    <div data-cell="7"><input type=text></input></div>
+    <div data-cell="8"><input type=text></input></div>
+    <div data-cell="9" class = "checkAnswer" id = "ans2"><p>Check Answer</p></div>
+  </div>
+  <div class="row">
+    <div data-cell="10"><input type=text></input></div>
+    <div data-cell="11"><input type=text></input></div>
+    <div data-cell="12"><input type=text></input></div>
+    <div data-cell="13"><input type=text></input></div>
+    <div data-cell="14" class = "checkAnswer" id = "ans3"><p>Check Answer</p></div>
+  </div>
+  <div class="row">
+    <div data-cell="15"><input type=text></input></div>
+    <div data-cell="16"><input type=text></input></div>
+    <div data-cell="17"><input type=text></input></div>
+    <div data-cell="18"><input type=text></input></div>
+    <div data-cell="19" class = "checkAnswer" id = "ans4"><p>Check Answer</p></div>
+  </div>
+  <div class="row">
+    <div data-cell="20"><input type=text></input></div>
+    <div data-cell="21"><input type=text></input></div>
+    <div data-cell="22"><input type=text></input></div>
+    <div data-cell="23"><input type=text></input></div>
+    <div data-cell="24" class = "checkAnswer" id = "ans5"><p>Check Answer</p></div>
+  </div>
+  <div>
+    <button onclick = "generateSolution()"> Generate Solution</button>
+    <button onclick = "getPrompt()"> Prompt User</button>
+    <button onclick = "checkAnswer()"> Check Answer</button>
+  </div>
+  <div id="announce-winner"></div>
+  <button id="clear">Clear Board</button>
+  <!--document.getElementById("ans1").innerHTML = "<p>  2  :  2  </p>";
+  document.getElementById("ans2").innerHTML = "<p>  Black: 2 <br> Red: 0  </p>";-->
+  <!--<script type="text/javascript" src="./script.js"></script>-->
+  <script type="text/javascript" src="./script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towers of Hanoi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<h1> Instructions: </h1>
+<ol>
+<li>Your goal is to move the full stack of tiles to <b>the third row down</b> with
+  tiles appearing in original order (descending by size to right).</li>
+<li>You will move one tile at a time. You can only move the top/outermost
+  right tile in any row. </li>
+<li>Tiles can be be moved up or down within rows, and will be added to the top
+  (outermost right position) of stack.</li>
+<li> Tiles can be added to empty rows or on top of larger tiles only.</li>
+<li><b>To begin,</b> click on the tile you would like to move.</li>
+<!--<li>The tile will disappear!</li>-->
+<li>Next, click on the destination row where you would like to move tile.</li>
+<li><b>Reminders: <ul><li>You can only select and move a tile from top
+  (outermost right position) of stack in any row.</b><br>
+  <i>If you accidently select a different tile from stack, you will be prompted
+     to select a new tile.</i></li>
+  <li><b>If row is not empty, tiles can only be added on top (to right) of larger tiles.</b><br>
+    <i>If you are trying to move a tile that is larger than the last tile in the
+    destination row, your tile will not be moved from original row.</i></li><ul></li>
+</ol>
+<body>
+  <div data-stack="1">
+    <div data-block="100"></div>
+    <div data-block="75"></div>
+    <div data-block="50"></div>
+    <div data-block="25"></div>
+  </div>
+  <div data-stack="2">
+  </div>
+  <div data-stack="3">
+  </div>
+  <div id="announce-game-won"></div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
