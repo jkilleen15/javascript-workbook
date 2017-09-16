@@ -1,8 +1,10 @@
 # Fetch Project
-ACA Week 9 Fetch Project
+ACA Week 10 Fetch Project
 
-To setup: npm install
+API - The Movie DB Blog
 
-To run: npm run build
+Displays top 20 movies, tv shows and people based on query keyword(s)
 
-View the project at localhost:8080
+'Deep Search' explores content beyond titles, including overview (plot)
+
+Includes Dynamic Search Option with User Input
