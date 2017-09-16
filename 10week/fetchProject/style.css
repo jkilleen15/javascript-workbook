@@ -1,0 +1,173 @@
+/* HTML ELEMENT STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 1em/1.5 'Roboto', sans-serif;
+  background: #4ec46f;
+  /*color: white;*/
+  color: #f7f7f7;
+  padding-top: 145px;
+  padding-bottom: 3em;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #4ec46f;
+}
+
+img {
+  height: 375px;
+  width: 250px;
+  margin: 10px 10px 10px 0px;
+}
+
+ul {
+  margin: 15px 10px 15px 20px;
+  padding: 10px 10px 10px 20px;
+  border-style:none;
+  border-width:thin;
+  background:#282828;
+}
+
+li {
+  list-style: none;
+
+}
+
+input {
+  font-size: 1.5em;
+  height: 46px;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  padding-left: 10px;
+  background-color: #f7f7f7;
+  /*background-color: white;*/
+  border-bottom-style: double;
+  outline: 0;
+  border-bottom: 4px solid #e4e4e4;
+  transition: border-color .4s;
+}
+
+input:focus {
+  border-color: #c1c1c1;
+}
+
+button {
+  width: 40px;
+  height: 35px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+  z-index: 2000;
+}
+
+/* PAGE COMPONENT STYLES */
+
+.main-title {
+  font-size: 1.4em;
+  line-height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /*color: white*/;
+  color: #f7f7f7;
+  margin: 0;
+}
+
+#lite {
+  font-size: 1em;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: gray;
+  padding-bottom: 15px;
+}
+
+.search-button {
+  float: inherit;
+  margin-right: 5px;
+  font-weight: 700;
+  border-style: solid;
+  background color: springgreen;
+  color: #4ec46f;
+}
+
+.search-form input:only-of-type {
+  width: 100%;
+  margin-right: -40px;
+  padding-right: 40px;
+  border-bottom: 20px
+}
+
+.no-results  {
+  color: #282828;
+  height: 140px;
+  padding-top: 62px;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+/* LAYOUT STYLES */
+
+.inner,
+.main-content {
+  width: 90%;
+  max-width: 1025px;
+  margin: auto;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #282828;
+  min-height: 80px;
+  z-index: 1000;
+}
+
+.main-content::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.is-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 0) and (max-width: 549px) {
+
+}
+
+@media (min-width: 550px) {
+
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-top: 115px;
+  }
+  .main-title {
+    float: left;
+  }
+  .search-form {
+    width: 422px;
+    float: right;
+    margin-top: 34px;
+  }
+}

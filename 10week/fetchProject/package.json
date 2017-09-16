@@ -1,8 +1,9 @@
 {
-  "name": "fetchproject",
+  "name": "fetchproject-blog",
   "version": "1.0.0",
-  "description": "ACA Week 9 Fetch Project",
-  "main": "index.js",
+  "description": "ACA Week 10 Fetch Project",
+  "main": "script.jsx",
+  "sourceType": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack-dev-server",
@@ -20,13 +21,20 @@
   "homepage": "https://github.com/mxviteri/fetchProject#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
     "babel-loader": "^7.1.2",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "module": "^1.2.5",
+    "moviedb": "^0.2.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
+  },
+  "devDependencies": {
+    "babel-install": "2.1.0"
   }
 }
