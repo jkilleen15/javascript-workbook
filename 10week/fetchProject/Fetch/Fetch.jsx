@@ -27,7 +27,7 @@ export default class Fetch extends Component {
   }
 
   performSearch (query = 'alaska') {
-    fetch(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&include_adult=false&sort_by=release_date.asc&query=${query}`)
+    fetch(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&include_adult=false&query=${query}`)
       .then(response => response.json())
       .then(data => {
         this.setState({
